@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "thesis-elm"
+version = "0.1.0"
+description = "PyTorch experiments for a bachelor thesis on Logistic Regression, MLP, ELM, and OS-ELM."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "numpy>=2.2.0",
+  "pandas>=2.2.0",
+  "scikit-learn>=1.6.0",
+  "torch>=2.6.0",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[project.optional-dependencies]
+analysis = [
+  "jupyter>=1.1.0",
+  "matplotlib>=3.10.0",
+  "seaborn>=0.13.0",
+]
+dev = [
+  "mypy>=1.15.0",
+  "pytest>=8.3.0",
+  "ruff>=0.11.0",
+]
+
+[project.scripts]
+thesis-elm = "thesis_elm.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/thesis_elm"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N", "D"]
+ignore = ["D100", "D107", "D203", "D212", "I001", "N802", "N803", "N806"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*.py" = ["D103"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+packages = ["thesis_elm"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["pandas", "pandas.*", "sklearn", "sklearn.*"]
+ignore_missing_imports = true
