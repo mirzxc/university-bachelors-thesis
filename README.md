@@ -87,3 +87,4 @@ The default project setup is CPU-first. If you later want CUDA acceleration, ins
 - [Modeling Guide](docs/modeling_guide.md)
 - [Experiment Cookbook](docs/experiments.md)
 - [Reproducibility Notes](docs/reproducibility.md)
+- [Obsidian Vault](obsidian/README.md)

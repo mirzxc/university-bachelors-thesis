@@ -12,3 +12,8 @@ notebooks/
 
 dist/
 build/
+
+# Obsidian workspace-local files
+obsidian/.obsidian/workspace*.json
+obsidian/.obsidian/cache
+obsidian/.trash/
