@@ -14,6 +14,7 @@ tags:
 
 - [[01-maps/repository-map]]
 - [[01-maps/sync-workflow]]
+- [[01-maps/literature-tracker]]
 - [[02-database/models/logistic-regression]]
 - [[02-database/models/mlp]]
 - [[02-database/models/elm]]
@@ -58,8 +59,19 @@ tags:
 - [[02-database/docs/experiment-cookbook]]
 - [[02-database/docs/reproducibility-notes]]
 
+### Literature
+
+- [[01-maps/literature-tracker]]
+- [[02-database/literature/huang-2006-extreme-learning-machine-theory-and-applications]]
+- [[02-database/literature/liang-2006-online-sequential-learning-algorithm]]
+- [[02-database/literature/huang-2012-elm-regression-and-multiclass-classification]]
+- [[02-database/literature/huang-2014-insight-into-extreme-learning-machines]]
+- [[02-database/literature/huang-et-al-2015-trends-in-extreme-learning-machines-review]]
+- [[02-database/literature/masana-et-al-2023-class-incremental-learning-survey]]
+
 ## Practical next notes
 
 - Use [[03-templates/experiment-note]] for each experiment run you want to discuss in the thesis.
 - Use [[03-templates/literature-note]] for papers on ELM, OS-ELM, continual learning, or numerical stability.
+- Promote papers from `to_read` to `reading` to `read` directly in their note properties.
 - Keep a thesis-specific MOC note in this vault once figures and tables start to stabilize.

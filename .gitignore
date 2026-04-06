@@ -17,3 +17,5 @@ build/
 obsidian/.obsidian/workspace*.json
 obsidian/.obsidian/cache
 obsidian/.trash/
+
+.codex

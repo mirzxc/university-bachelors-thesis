@@ -8,7 +8,7 @@ Open `obsidian/` as a vault in Obsidian.
 
 - `00-dashboard.md`: entry point and navigation hub
 - `01-maps/`: repo-level maps and architecture notes
-- `02-database/`: frontmatter-driven notes for models, commands, datasets, and docs
+- `02-database/`: frontmatter-driven notes for models, commands, datasets, docs, and literature
 - `03-templates/`: reusable note templates for experiments and literature
 
 ## Database approach
@@ -29,3 +29,4 @@ Type-specific notes add fields such as `cli_name`, `handler`, `dataset_kind`, or
 2. Use note properties to filter notes by `type`, `area`, or `status`.
 3. Duplicate a template from `03-templates/` when you start a new experiment or literature note.
 4. Link new notes back to repo files with relative markdown links.
+5. Track paper progress through `reading_status` and `priority` so the literature backlog stays actionable.
